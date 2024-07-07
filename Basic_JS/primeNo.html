@@ -1,0 +1,29 @@
+<!-- WAP in JavaScript to check whether the given no. is prime or not. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        a = prompt("enter a number:");
+        let temp = 0;
+        for (let i = 2; i < a; i++) {
+            if (a % i == 0) {
+                temp = 1;
+            }
+        }
+        if (temp == 1) {
+            alert("Number is not Prime");
+        }
+        else {
+            alert("Number is prime");
+        }
+    </script>
+</body>
+
+</html>

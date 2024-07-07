@@ -1,0 +1,31 @@
+<!-- WAP in JavaScript to prime number between the given range of number.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter a number 1:");
+        let b = prompt("Enter a number 2:");
+        for (let i = a; i <= b; i++) {
+            temp = 0;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    temp = 1;
+                    break;
+                }
+            }
+            if (temp != 1) {
+                document.write(i + " is prime number <br>");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

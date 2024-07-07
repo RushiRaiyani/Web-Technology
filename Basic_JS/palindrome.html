@@ -1,0 +1,32 @@
+<!-- WAP in JavaScript to check whether the given number is palindrome or not. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter a number:");
+        let temp = a.length - 1;
+        let isPali = true;
+        for (let i = 0; i < a.length / 2; i++) {
+            if (a[i] != a[temp]) {
+                isPali = false;
+                break;
+            }
+            temp--;
+        }
+        if (isPali) {
+            alert("Number is palindrome");
+        }
+        else {
+            alert("Number is not palindrome");
+        }
+    </script>
+</body>
+
+</html>
