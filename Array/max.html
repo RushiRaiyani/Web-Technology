@@ -1,0 +1,29 @@
+<!-- Demonstrate the use of array to ƒind maximum number.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter size of array:");
+        let arr = [];
+        for (let i = 1; i <= a; i++) {
+            let b = prompt("Entera a number:");
+            arr.push(b);
+        }
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        document.write("maximum element in array is " + max);
+    </script>
+</body>
+
+</html>

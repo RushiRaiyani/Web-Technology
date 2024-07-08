@@ -1,0 +1,33 @@
+<!-- Demonstrate different array functions like push, pop, shift, unshift, splice, sort etc… -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter size of array:");
+        let arr = [];
+        for (let i = 0; i < a; i++) {
+            arr[i] = prompt("Entera a number:");
+        }
+        arr.push(prompt("enter a number to push:"));
+        console.log("array after push method:" + arr);
+        arr.pop();
+        console.log("array after pop method:" + arr);
+        arr.shift();
+        console.log("array after shift method:" + arr);
+        arr.unshift(prompt("enter a number to unshift:"));
+        console.log("array after unshift method:" + arr);
+        arr.splice(2, 1);
+        console.log("array after splice method:" + arr);
+        arr.sort((a, b) => a - b);
+        console.log("Array after sort method: " + arr);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!-- WAP to display students stored in array. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        arr = [
+            {
+                "name": "Tyler Crist",
+                "id": "1"
+            },
+            {
+                "name": "Karen Kuhic",
+                "id": "2"
+            },
+            {
+                "name": "Mr. Roland Zieme",
+                "id": "3"
+            },
+            {
+                "name": "Madeline Bartoletti",
+                "id": "4"
+            },
+            {
+                "name": "Garrett Rosenbaum",
+                "id": "5"
+            }
+        ]
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i].name + " ");
+            document.write(arr[i].id);
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>
