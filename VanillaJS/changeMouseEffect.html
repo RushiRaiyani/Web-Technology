@@ -1,0 +1,78 @@
+<!-- Write a JavaScript that handles following mouse events. Add necessary elements,
+If the mouse is over the heading should turn yellow and if the mouse goes out of the 
+heading it should turn black.
+If ƒndtime button is clicked show time and date information.
+If button named “red” is clicked, background should change to red and If button named 
+“green” is clicked, background should
+change to green. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            margin-top: 20px;
+            height: 100px;
+            width: 200px;
+        }
+
+        #dateText {
+            font-size: larger;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="headPart">This is Heading Tag</h1>
+    <button id="dateTime">Date and Time</button>
+    <div id="dateText"></div>
+    <div class="new">
+        <button id="red">Click me to change background to RED</button>
+        <button id="green">Click me to change background to GREEN</button>
+    </div>
+    <script>
+        function change(a) {
+            if (a == 'mouseover') {
+                document.getElementById('headPart').style.color = 'yellow';
+            }
+            else if (a == 'mouseout') {
+                document.getElementById('headPart').style.color = 'black';
+            }
+            else if (a == 'dateTime') {
+                let date = new Date();
+                document.getElementById('dateText').innerHTML = date;
+            }
+            else if (a == 'red') {
+                document.body.style.backgroundColor = 'red';
+            }
+            else if (a == 'green') {
+                document.body.style.backgroundColor = 'green';
+            }
+        }
+        document.getElementById('headPart').addEventListener('mouseover', () => change('mouseover'));
+        document.getElementById('headPart').addEventListener('mouseout', () => change('mouseout'));
+
+        document.getElementById('dateTime').addEventListener('click', () => change('dateTime'));
+        document.getElementById('red').addEventListener('click', () => change('red'));
+        document.getElementById('green').addEventListener('click', () => change('green'));
+    </script>
+</body>
+
+</html>

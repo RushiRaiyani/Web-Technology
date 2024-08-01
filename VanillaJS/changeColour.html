@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            height: 200px;
+            width: 200px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="change()">click Me and i will change colour for you</button>
+    <script>
+        let temp = 1;
+        let body = document.querySelector('body');
+        function change() {
+            if (temp == 1) {
+                a = Math.random();
+                b = Math.random();
+                c = Math.random();
+                body.style.backgroundColor = 'rgb(' + a * 255 + ',' + b * 255 + ',' + c * 255 + ')';
+                temp = 0;
+            } else {
+                a = Math.random();
+                b = Math.random();
+                c = Math.random();
+                body.style.backgroundColor = 'rgb(' + a * 255 + ',' + b * 255 + ',' + c * 255 + ')';
+                temp = 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
