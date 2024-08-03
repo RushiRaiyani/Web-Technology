@@ -1,0 +1,51 @@
+<!-- WAP to demonstrate change in properties of HTML element using JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            height: 100px;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            height: 100px;
+            width: 200px;
+        }
+
+        input {
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main">Welcome to watch changing properties</h1>
+    <input type="text" id="txtcolor" placeholder="Text Color (e.g., red)">
+    <input type="text" id="bgColor" placeholder="Background Color (e.g., blue)">
+    <button id="submit">click to see changes</button>
+    <script>
+        document.getElementById('submit').addEventListener('click', effects);
+        function effects() {
+            a = document.getElementById("txtcolor").value;
+            b = document.getElementById("bgColor").value;
+            document.getElementById('main').style.color = a;
+            document.getElementById('main').style.backgroundColor = b;
+        }
+    </script>
+</body>
+
+</html>

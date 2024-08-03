@@ -1,0 +1,57 @@
+<!-- WAP to recognize which mouse event is ƒired. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 500px;
+            width: 500px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text">hello</div>
+    <script>
+        function display(a) {
+            let b = document.getElementById('text');
+            if (a == 'click') {
+                b.style.backgroundColor = "pink";
+                b.innerHTML = 'clicked';
+            }
+            else if (a == 'mouseout') {
+                b.style.backgroundColor = "red";
+                b.innerHTML = 'mouseout';
+            }
+            else if (a == 'dblclick') {
+                b.style.backgroundColor = "blue";
+                b.innerHTML = 'dblclick';
+            }
+            else if (a == 'mousemove') {
+                b.style.backgroundColor = "orange";
+                b.innerHTML = 'mousemove';
+            }
+            else if (a == 'mouseover') {
+                b.style.backgroundColor = "green";
+                b.innerHTML = 'mouseover';
+            }
+            else if (a == 'mousedown') {
+                b.style.backgroundColor = "yellow";
+                b.innerHTML = 'mousedown';
+            }
+        }
+        document.addEventListener('click', () => display('click'));
+        document.addEventListener('mouseout', () => display('mouseout'));
+        document.addEventListener('mousedown', () => display('mousedown'));
+        document.addEventListener('dblclick', () => display('dblclick'));
+        document.addEventListener('mouseover', () => display('mouseover'));
+        document.addEventListener('mousemove', () => display('mousemove'));
+    </script>
+</body>
+
+</html>

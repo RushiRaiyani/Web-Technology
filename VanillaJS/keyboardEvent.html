@@ -1,0 +1,85 @@
+<!-- WAP to recognize which keyboard event is ƒired. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .part {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+
+        .box {
+            display: flex;
+            width: 350px;
+            margin: 5px;
+            justify-content: center;
+        }
+
+        .part {
+            margin: 5px;
+            display: flex;
+            font-size: 60px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body onkeyup="occur(event)" onkeydown="occur2(event)">
+    <div class="main">
+        <div class="box">
+            <div class="up part" id="up">&#8593;</div>
+        </div>
+        <div class="box">
+            <div class="left part" id="left">&#8592;</div>
+            <div class="down part" id="down">&#8595;</div>
+            <div class="right part" id="right">&#8594;</div>
+        </div>
+    </div>
+    <script>
+        function occur2(e) {
+            if (e.key == 'ArrowUp') {
+                document.getElementById('up').style.backgroundColor = "red";
+                console.log("hello");
+            }
+            else if (e.key == 'ArrowDown') {
+                document.getElementById('down').style.backgroundColor = "blue";
+            }
+            else if (e.key == 'ArrowRight') {
+                document.getElementById('right').style.backgroundColor = "green";
+            }
+            else if (e.key == 'ArrowLeft') {
+                document.getElementById('left').style.backgroundColor = "orange";
+            }
+        }
+        function occur(e) {
+            if (e.key == 'ArrowUp') {
+                document.getElementById('up').style.backgroundColor = "white";
+                console.log("hello");
+            }
+            else if (e.key == 'ArrowDown') {
+                document.getElementById('down').style.backgroundColor = "white";
+            }
+            else if (e.key == 'ArrowRight') {
+                document.getElementById('right').style.backgroundColor = "white";
+            }
+            else if (e.key == 'ArrowLeft') {
+                document.getElementById('left').style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+
+</html>
