@@ -1,0 +1,49 @@
+<!-- Write a JavaScript having a list of checkbox and by clicking on checkbox, it should show 
+list of selected value in comma separated format. (e.g. list of roll number as checkbox 
+value, and display selected roll number in comma separated format)  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Select Roll Numbers</h1>
+    <form id="rollForm">
+        <input type="checkbox" id="roll1" name="roll" value="101" onclick="handleCheckboxChange()">
+        <label for="roll1">101</label><br>
+        <input type="checkbox" id="roll2" name="roll" value="102" onclick="handleCheckboxChange()">
+        <label for="roll2">102</label><br>
+        <input type="checkbox" id="roll3" name="roll" value="103" onclick="handleCheckboxChange()">
+        <label for="roll3">103</label><br>
+        <input type="checkbox" id="roll4" name="roll" value="104" onclick="handleCheckboxChange()">
+        <label for="roll4">104</label><br>
+    </form>
+
+    <p id="selectedRolls">Selected Rolls: </p>
+
+    <script>
+        function handleCheckboxChange() {
+            const checkboxes = document.getElementsByName('roll');
+            const selectedRolls = [];
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    selectedRolls.push(checkboxes[i].value);
+                }
+            }
+            document.getElementById('selectedRolls').textContent = 'Selected Rolls: ' + selectedRolls.join(', ');
+        }
+    </script>
+</body>
+
+</html>

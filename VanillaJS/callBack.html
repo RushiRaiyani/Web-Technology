@@ -1,0 +1,23 @@
+<!-- WAP to demonstrate callbacks in JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks Function</title>
+</head>
+
+<body>
+    <script>
+        function great(a, b, add) {
+            add(a, b);
+        }
+        function add(a, b) {
+            console.log(a + b);
+        }
+        great(5, 6, add);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!-- Demonstrate how to create a class in Java Script.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Add {
+            constructor(a, b) {
+                this.a = a;
+                this.b = b;
+            }
+            add() {
+                console.log(this.a + this.b);
+            }
+        }
+        let obj = new Add(5, 6);
+        obj.add();
+    </script>
+</body>
+
+</html>
